@@ -1,0 +1,13 @@
+.component-header{
+  box-sizing: border-box;
+  padding: 15px 25px;
+  border-bottom: 1px solid #ccc;
+  background: white;
+  display: flex;
+}
+.component-header .caption{
+  font-size: 20px;
+}
+.component-header img{
+  margin: 10px;
+}
