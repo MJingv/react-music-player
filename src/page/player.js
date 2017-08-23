@@ -17,7 +17,6 @@ class Player extends Component {
     $("#player").bind($.jPlayer.event.timeupdate, (e) => {
       duration = e.jPlayer.status.duration;
       this.setState({
-
         progress: Math.round(e.jPlayer.status.currentPercentAbsolute)
       })
     });
