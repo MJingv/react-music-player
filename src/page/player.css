@@ -15,10 +15,23 @@
   margin-left: 20px;
 }
 
-.container-player .cover img {
+.container-player .cover.active img{
+  animation: cover-rotate infinite 30s linear ;
   width: 180px;
   height: 180px;
   border-radius: 50%;
+}
+
+.container-player .cover img {
+
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+}
+
+@keyframes cover-rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 .container-player .volume-container {

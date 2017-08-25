@@ -1,13 +1,19 @@
 .component-header{
-  box-sizing: border-box;
   padding: 15px 25px;
-  border-bottom: 1px solid #ccc;
   background: white;
   display: flex;
+  padding:20px;
+  border-bottom-style:double;
+  border-bottom-color:rgba(234,98,72,0.5);
+  border-bottom-width:8px;
 }
 .component-header .caption{
-  font-size: 20px;
+  font-size: 30px;
+  font-family:'Abril Fatface','Oleo Script Swash Caps',Arial;
+  text-shadow: 1px 1px #EFEFEF, 3px 3px 5px rgb(234,98,72);
+  color:#666;
+  font-weight: 900;
 }
 .component-header img{
-  margin: 10px;
+  margin-right: 20px;
 }

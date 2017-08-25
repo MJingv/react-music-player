@@ -18,8 +18,7 @@ class Player extends Component {
       this.setState({
         progress: e.jPlayer.status.currentPercentAbsolute,
         volume: e.jPlayer.options.volume * 100,
-        leftTime: this.formatTime(duration *
-           (1 - e.jPlayer.status.currentPercentAbsolute / 100))
+        leftTime: this.formatTime(duration * (1 - e.jPlayer.status.currentPercentAbsolute / 100))
       })
     });
   }
@@ -61,7 +60,7 @@ class Player extends Component {
   }
 
   changeCycleModel = () => {
-console.log('child sended');
+    console.log('child sended');
     Pubsub.publish('CHANGE_CYCLE_MODEL');
 
   }
@@ -116,13 +115,16 @@ console.log('child sended');
                   : 'play'}`}></i>
                 <i onClick={this.playNext} className="icon next ml20"></i>
 
-                <i onClick={this.changeCycleModel}
-                   className={`icon ml20 repeat-${this.props.cycleModel}`}></i>
+                <i onClick={this.changeCycleModel} className={`icon ml20 repeat-${this.props.cycleModel}`}></i>
               </div>
 
             </div>
           </div>
-          <div className="-col-auto cover">
+          {/* <div className = {`-col-auto cover ${this.state.isPlay ?'active':''}`}> */}
+          <div className={this.state.isPlay
+            ? "-col-auto cover active"
+            : "-col-auto cover"}>
+
             <img src={this.props.cuerrentMusicItem.cover} alt={this.props.cuerrentMusicItem.title}/>
           </div>
         </div>
